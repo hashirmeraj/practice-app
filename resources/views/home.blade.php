@@ -3,4 +3,5 @@
         <a href="{{ route('view.user', $id) }}"> Show</a>
     </h1>
     <h1>{{ $user['name'] }}</h1>
+    
 @endforeach
