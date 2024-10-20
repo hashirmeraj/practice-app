@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 function getUser()
 {
@@ -12,20 +13,25 @@ function getUser()
     ];
 }
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/home', function () {
-    $users = getUser();
+// Route::get('/home', function () {
+//     $users = getUser();
 
-    return view('home', ['users' => $users]);
-});
-Route::get('users/{id}', function ($id) {
-    $users = getUser();
-    abort_if(!isset($users[$id]), 404);
+//     return view('home', ['users' => $users]);
+// });
+// Route::get('users/{id}', function ($id) {
+//     $users = getUser();
+//     abort_if(!isset($users[$id]), 404);
 
-    $user = $users[$id];
+//     $user = $users[$id];
 
-    return view('users', ['id' => $user]);
-})->name('view.user');
+//     return view('users', ['id' => $user]);
+// })->name('view.user');
+
+
+
+
+Route::get('/users', [UserController::class,'user'])->name('user');
