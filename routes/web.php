@@ -33,3 +33,6 @@ function getUser()
 
 
 
+
+
+Route::get('/students', [studentController::class,'showStudents']);
