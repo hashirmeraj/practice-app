@@ -6,11 +6,5 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function user(){
-        return view('users');
-    }
-
-    public function person(string $id){
-        return view('person', compact('id'));
-    }
+    
 }

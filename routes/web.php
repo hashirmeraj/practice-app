@@ -33,7 +33,3 @@ function getUser()
 
 
 
-
-Route::get('/users', [UserController::class,'user'])->name('user');
-
-Route::get('/person/{id}', [UserController::class, 'person']);
