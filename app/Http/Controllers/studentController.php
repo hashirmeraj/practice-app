@@ -32,7 +32,7 @@ class studentController extends Controller
 
     public function store(Request $req){
         $user = DB::table('students')
-        -insert([
+        ->insert([
             'Name' => $req->userName,
             'Name' => $req->userEmail,
             'Name' => $req->userCity
