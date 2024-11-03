@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Redirect;
 
 use Illuminate\Http\Request;
 
@@ -26,7 +26,7 @@ class studentController extends Controller
         ->delete();
 
         if ($user) {
-            return 
+            return Redirect::to('/students');
         }
     }
 }
