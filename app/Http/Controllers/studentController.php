@@ -19,4 +19,14 @@ class studentController extends Controller
 
         return view('student', ['users' => $user]);
     }
+
+    public function deleteUser($id){
+        $user = DB::table('students') 
+        -> where('id', $id)
+        ->delete();
+
+        if (condition) {
+            # code...
+        }
+    }
 }

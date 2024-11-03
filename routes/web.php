@@ -39,3 +39,5 @@ Route::get('/students', [studentController::class,'showStudents']);
 
 
 Route::get('/student/{id}', [studentController::class,'singleUser'])->name('view.single');
+
+Route::get('/delete/{id}' , [studentController::class, 'deleteUser'])-> name('delete.user');
