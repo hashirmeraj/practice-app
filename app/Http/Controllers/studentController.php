@@ -13,4 +13,10 @@ class studentController extends Controller
 
         return view('students', ['data' => $users]);
     }
+
+    public function singleUser($id){
+        $user = User::find($id);
+
+        return view('student', ['user' => $user]);
+    }
 }

@@ -30,7 +30,7 @@
       </thead>
       
       <tbody>
-        @foreach ($data as $id => $users)
+        
           <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
               
                   
@@ -48,7 +48,7 @@
                 <a href="{{route('view.single', $users->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
             </td>
             </tr>
-        @endforeach
+        
          
           
       </tbody>
