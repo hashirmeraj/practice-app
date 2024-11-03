@@ -11,7 +11,7 @@
     <div class=" w-full h-[100vh] flex items-center justify-center">
         <form action="{{ route('store.user') }}" method="post" class=" w-2/5">
 
-
+            @csrf
 
             <label for="website-admin"
                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
