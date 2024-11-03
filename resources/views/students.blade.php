@@ -8,10 +8,9 @@
   @vite('resources/css/app.css')
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-    
-  </h1>
+  <div class=" w-[50%] h-[200px] bg-white"> 
+    <h1>hashssankj</h1>
+  </div>
   @foreach ($data as $id => $users)
     <h3>{{$users->id }}</h3>
     <h3>{{$users->Name }}</h3>
