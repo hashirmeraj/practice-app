@@ -17,6 +17,6 @@ class studentController extends Controller
     public function singleUser($id){
         $user = DB::table('students')->find($id);
 
-        return view('student', ['user' => $user]);
+        return view('student', ['users' => $user]);
     }
 }
