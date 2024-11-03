@@ -44,9 +44,7 @@
               <td class="px-6 py-4">
                 {{$users->Email }}
               </td>
-              <td class="px-6 py-4">
-                <a href="{{route('view.single', $users->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
-            </td>
+              
             </tr>
         
          
