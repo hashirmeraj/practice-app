@@ -38,4 +38,4 @@ function getUser()
 Route::get('/students', [studentController::class,'showStudents']);
 
 
-Route::get('/student/{$id}', [studentController::class,'singleUser'])->name('view.single');
+Route::get('/student/{id}', [studentController::class,'singleUser'])->name('view.single');
