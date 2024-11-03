@@ -34,12 +34,12 @@ class studentController extends Controller
         $user = DB::table('students')
         ->insert([
             'Name' => $req->userName,
-            'Name' => $req->userEmail,
-            'Name' => $req->userCity
+            'Email' => $req->userEmail,
+            'City' => $req->userCity
         ]);
 
         if ($user) {
-            echo("YEs");
+            return Redirect::to('/students');
         }
     }
 }
