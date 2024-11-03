@@ -9,7 +9,7 @@
 
 <body>
     <div class=" w-full h-[100vh] flex items-center justify-center">
-        <form action="" method="post" class=" w-2/5">
+        <form action="{{ route('store.user') }}" method="post" class=" w-2/5">
 
 
 
@@ -41,7 +41,7 @@
                             d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
                     </svg>
                 </div>
-                <input type="Email" name="yserEmail" id="input-group-1"
+                <input type="Email" name="userEmail" id="input-group-1"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="name@flowbite.com">
             </div>
@@ -61,7 +61,7 @@
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="City">
             </div>
-            <button type="submit" class="p-3 bg-slate-800 rounded-lg text-white">Submit</button>
+            <button type="submit" class="p-3 bg-slate-800 rounded-lg">Submit</button>
         </form>
 
     </div>

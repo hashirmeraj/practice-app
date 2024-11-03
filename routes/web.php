@@ -43,3 +43,5 @@ Route::get('/student/{id}', [studentController::class,'singleUser'])->name('view
 Route::get('/delete/{id}' , [studentController::class, 'deleteUser'])-> name('delete.user');
 
 Route::view('/adduser', 'adduser')->name('add.user');
+
+Route::post('/adduser', [studentController::class, 'store'])->name('store.user');

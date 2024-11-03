@@ -29,4 +29,17 @@ class studentController extends Controller
             return Redirect::to('/students');
         }
     }
+
+    public function store(Request $req){
+        $user = DB::table('students')
+        -insert([
+            'Name' => $req->userName,
+            'Name' => $req->userEmail,
+            'Name' => $req->userCity
+        ]);
+
+        if ($user) {
+            echo("YEs");
+        }
+    }
 }
