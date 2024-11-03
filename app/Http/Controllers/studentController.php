@@ -25,8 +25,8 @@ class studentController extends Controller
         -> where('id', $id)
         ->delete();
 
-        if (condition) {
-            # code...
+        if ($user) {
+            return 
         }
     }
 }
