@@ -32,6 +32,9 @@
               <th scope="col" class="px-6 py-3">
                   Name
               </th>
+              <th scope="col" class="px-6 py-3">
+                  Email
+              </th>
               
           </tr>
       </thead>
