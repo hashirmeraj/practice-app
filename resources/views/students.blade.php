@@ -12,6 +12,9 @@
 
 
 
+  <a href="{{route('add.user')}}">
+    <div class="p-2 w-28 bg-slate-800 text-wrap text-white font-semibold border rounded-sm">  Add User</div>
+  </a>
 <div class="relative overflow-x-auto  sm:rounded-lg w-full h-[100vh] flex items-center justify-center ">
   <table class=" w-3/5 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -24,6 +27,9 @@
               </th>
               <th scope="col" class="px-6 py-3">
                   Email
+              </th>
+              <th scope="col" class="px-6 py-3">
+                  City
               </th>
               <th scope="col" class="px-6 py-3 row-span-4">
                   Action
@@ -49,6 +55,9 @@
               </td>
               <td class="px-6 py-4">
                 {{$users->Email }}
+              </td>
+              <td class="px-6 py-4">
+                {{$users->City }}
               </td>
               <td class="px-6 py-4">
                 <a href="{{route('view.single', $users->id)}}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">View</a>
