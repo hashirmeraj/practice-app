@@ -8,7 +8,9 @@
 </head>
 
 <body>
+
     <div class=" w-full h-[100vh] flex items-center justify-center">
+
         <form action="{{ route('store.user') }}" method="post" class=" w-2/5">
 
             @csrf
@@ -25,9 +27,24 @@
                     </svg>
                 </span>
                 <input type="text" name="userName" id="website-admin"
-                    class="rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="rounded-none rounded-e-lg bg-gray-50 border text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm border-gray-300 p-2.5 
+                    dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+
+                    @error('userName') border-red-500 bg-red-50 dark:bg-red-900 @enderror"
+                    value="{{old('userName')}}"
                     placeholder="elonmusk">
+
+
             </div>
+
+
+            {{-- Showing Error --}}
+
+
+            @error('userName')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+            @enderror
+
 
             <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
                 Email</label>
@@ -42,10 +59,14 @@
                     </svg>
                 </div>
                 <input type="Email" name="userEmail" id="input-group-1"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="name@flowbite.com">
+                    class="@error('userEmail') border-red-500 bg-red-50 dark:bg-red-900 @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="name@flowbite.com"
+                    value="{{old('userEmail')}}"
+                    >
             </div>
-
+            @error('userEmail')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+            @enderror
             <label for="input-group-1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
             <div class="relative mb-6">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
@@ -58,9 +79,15 @@
                     </svg>
                 </div>
                 <input type="text" name="userCity" id="input-group-1"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="City">
+                    class=" @error('userCity') border-red-500 bg-red-50 dark:bg-red-900 @enderror bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="City"
+                    value="{{old('userCity')}}"
+                    >
             </div>
+
+            @error('userCity')
+                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+            @enderror
             <button type="submit" class="p-3 bg-slate-800 rounded-lg">Submit</button>
         </form>
 
