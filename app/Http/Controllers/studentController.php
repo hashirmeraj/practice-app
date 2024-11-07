@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class studentController extends Controller
 {
     public function showStudents(){
-        $users = DB::table('students')->get();
+        $users = DB::table('students')->paginate(5);
 
         return view('students', ['data' => $users]);
     }
