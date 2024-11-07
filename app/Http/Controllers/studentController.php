@@ -39,7 +39,7 @@ class studentController extends Controller
             "userName.required" => 'User name cannot be empty',
             "userEmail.required" => 'Please enter a valid email address.',
             "userCity.required" => 'City name is required.',
-            "userCity.email" => 'PRpper dal'
+            "userEmail.email" => 'Please enter a valid email address'
         ]);
 
         $user = DB::table('students')
