@@ -33,8 +33,13 @@ class studentController extends Controller
     public function store(Request $req){
         $req->validate([
             'userName' => 'required',
-            'userEmail' => 'required',
+            'userEmail' => 'required | email',
             'userCity' => 'required'
+        ], [
+            "userName.required" => 'Username cannot be empty',
+            "userEmail.required" => 'Please enter a valid email address.',
+            "userCity.required" => 'City name is required.',
+            "userCity.email" => 'PRpper dal'
         ]);
 
         $user = DB::table('students')
