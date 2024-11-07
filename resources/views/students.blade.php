@@ -74,7 +74,7 @@
 
             </tbody>
         </table>
-        <div class="paginate"> {{ $data->link() }}</div>
+        <div class="paginate"> {{ $data->links() }}</div>
     </div>
 
 </body>
