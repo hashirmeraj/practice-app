@@ -31,6 +31,7 @@ class studentController extends Controller
     }
 
     public function store(Request $req){
+        
         $user = DB::table('students')
         ->insert([
             'Name' => $req->userName,
